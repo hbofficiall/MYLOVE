@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Eternal Love - Emaan Bukhari</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 25%, #ffc0cb 50%, #ffb6c1 75%, #ff69b4 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Enhanced Floating Elements */
+        .floating-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .floating-item {
+            position: absolute;
+            animation: floatUp 8s ease-in infinite;
+            opacity: 0.6;
+        }
+        
+        .heart { color: #ff1493; font-size: 24px; }
+        .rose { color: #dc143c; font-size: 20px; }
+        .sparkle { color: #ffd700; font-size: 16px; }
+        .kiss { color: #ff69b4; font-size: 22px; }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0);
+                opacity: 0;
+            }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% {
+                transform: translateY(-100vh) rotate(360deg) scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        /* Particle Effects */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            animation: particleFloat 4s ease-in-out infinite;
+        }
+        
+        @keyframes particleFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(10px, -10px) scale(1.2); }
+            50% { transform: translate(-5px, -20px) scale(1); }
+            75% { transform: translate(-10px, -10px) scale(0.8); }
+        }
+        
+        /* Main Container */
+        .container {
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Section Styling */
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        
+        /* Front Page - Enhanced */
+        .front-page {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 50px;
+            border-radius: 40px;
+            box-shadow: 
+                0 20px 60px rgba(255, 20, 147, 0.3),
+                inset 0 0 0 3px rgba(255, 182, 193, 0.5),
+                inset 0 0 30px rgba(255, 192, 203, 0.3);
+            max-width: 700px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            animation: cardEntry 1.5s ease-out;
+            border: 2px solid rgba(255, 105, 180, 0.3);
+        }
+        
+        @keyframes cardEntry {
+            0% { 
+                opacity: 0; 
+                transform: translateY(50px) scale(0.8) rotateX(20deg);
+                filter: blur(10px);
+            }
+            50% { transform: translateY(-20px) scale(1.02); }
+            100% { 
+                opacity: 1; 
+                transform: translateY(0) scale(1) rotateX(0);
+                filter: blur(0);
+            }
+        }
+        
+        .front-page::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent 30%, 
+                rgba(255, 182, 193, 0.4) 50%, 
+                transparent 70%);
+            animation: shimmer 4s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .corner-decoration {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.6;
+            animation: cornerPulse 2s infinite;
+        }
+        
+        .corner-tl { top: 20px; left: 20px; }
+        .corner-tr { top: 20px; right: 20px; animation-delay: 0.5s; }
+        .corner-bl { bottom: 20px; left: 20px; animation-delay: 1s; }
+        .corner-br { bottom: 20px; right: 20px; animation-delay: 1.5s; }
+        
+        @keyframes cornerPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+            50% { transform: scale(1.2) rotate(10deg); opacity: 1; }
+        }
+        
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4em;
+            color: #c71585;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(199, 21, 133, 0.3);
+            animation: titleGlow 3s infinite alternate;
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes titleGlow {
+            from { 
+                text-shadow: 3px 3px 6px rgba(199, 21, 133, 0.3);
+                transform: scale(1);
+            }
+            to { 
+                text-shadow: 
+                    3px 3px 6px rgba(199, 21, 133, 0.5),
+                    0 0 30px rgba(255, 105, 180, 0.6),
+                    0 0 60px rgba(255, 20, 147, 0.4);
+                transform: scale(1.02);
+            }
+        }
+        
+        .subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8em;
+            color: #db7093;
+            margin-bottom: 30px;
+            font-weight: 400;
+            animation: fadeInUp 1s 0.5s both;
+        }
+        
+        .question-text {
+            font-size: 1.4em;
+            color: #8b4513;
+            margin-bottom: 40px;
+            font-weight: 600;
+            animation: fadeInUp 1s 0.7s both;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Enhanced Buttons */
+        .buttons-container {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            min-height: 100px;
+            z-index: 10;
+        }
+        
+        .btn {
+            padding: 18px 50px;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-yes {
+            background: linear-gradient(135deg, #ff1493 0%, #ff69b4 50%, #ffb6c1 100%);
+            color: white;
+            box-shadow: 
+                0 10px 30px rgba(255, 20, 147, 0.4),
+                0 0 0 4px rgba(255, 255, 255, 0.5),
+                0 0 0 8px rgba(255, 20, 147, 0.2);
+            animation: heartbeat 1.5s infinite, float 3s ease-in-out infinite;
+            position: relative;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            14% { transform: scale(1.1); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.15); }
+            70% { transform: scale(1); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .btn-yes:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 
+                0 20px 40px rgba(255, 20, 147, 0.6),
+                0 0 0 4px rgba(255, 255, 255, 0.8),
+                0 0 0 12px rgba(255, 20, 147, 0.3);
+        }
+        
+        .btn-no {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #6c757d;
+            border: 3px solid #dee2e6;
+            position: absolute;
+            transition: all 0.2s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-no:hover {
+            background: #ffe4e1;
+            color: #dc143c;
+            border-color: #dc143c;
+        }
+        
+        /* Love Q&A Section */
+        .qa-section {
+            display: none;
+            max-width: 900px;
+            width: 100%;
+            padding: 40px 20px;
+        }
+        
+        .qa-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5em;
+            color: #c71585;
+            text-align: center;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(199, 21, 133, 0.3);
+            animation: slideDown 1s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .qa-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.15);
+            border-left: 5px solid #ff69b4;
+            transform: translateX(-100px);
+            opacity: 0;
+            animation: slideIn 0.8s forwards;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .qa-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255,182,193,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .qa-card:nth-child(2) { animation-delay: 0.2s; border-left-color: #ff1493; }
+        .qa-card:nth-child(3) { animation-delay: 0.4s; border-left-color: #db7093; }
+        .qa-card:nth-child(4) { animation-delay: 0.6s; border-left-color: #c71585; }
+        .qa-card:nth-child(5) { animation-delay: 0.8s; border-left-color: #ff69b4; }
+        .qa-card:nth-child(6) { animation-delay: 1s; border-left-color: #ff1493; }
+        
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .qa-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            color: #8b4513;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .qa-icon {
+            font-size: 1.5em;
+            animation: wiggle 2s infinite;
+        }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .qa-answer {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            padding-left: 40px;
+            font-style: italic;
+            border-left: 2px solid #ffb6c1;
+            margin-left: 10px;
+        }
+        
+        /* Love Letter Section - Enhanced */
+        .letter-section {
+            display: none;
+            max-width: 850px;
+            width: 100%;
+            padding: 40px 20px;
+        }
+        
+        .letter-container {
+            background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(255,240,245,0.95) 100%);
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 
+                0 20px 60px rgba(199, 21, 133, 0.2),
+                0 0 0 10px rgba(255, 182, 193, 0.3);
+            position: relative;
+            animation: letterAppear 1.5s ease-out;
+            border: 3px double #ffb6c1;
+        }
+        
+        @keyframes letterAppear {
+            0% { 
+                opacity: 0; 
+                transform: rotateY(-30deg) translateZ(-200px);
+                filter: blur(20px);
+            }
+            100% { 
+                opacity: 1; 
+                transform: rotateY(0) translateZ(0);
+                filter: blur(0);
+            }
+        }
+        
+        .wax-seal {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle at 30% 30%, #dc143c, #8b0000);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: 
+                0 10px 30px rgba(139, 0, 0, 0.3),
+                inset 0 -5px 10px rgba(0,0,0,0.2);
+            animation: sealPulse 2s infinite;
+            z-index: 10;
+        }
+        
+        @keyframes sealPulse {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.1); }
+        }
+        
+        .letter-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3em;
+            color: #c71585;
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(199, 21, 133, 0.2);
+        }
+        
+        .letter-content {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15em;
+            line-height: 2.2;
+            color: #4a4a4a;
+            text-align: justify;
+            white-space: pre-line;
+        }
+        
+        .letter-content p {
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: paragraphFadeIn 1s forwards;
+            text-indent: 30px;
+        }
+        
+        @keyframes paragraphFadeIn {
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, rgba(255,182,193,0.3) 0%, rgba(255,182,193,0.3) 100%);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: 600;
+            color: #c71585;
+        }
+        
+        .signature {
+            text-align: center;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2em;
+            color: #c71585;
+            margin-top: 40px;
+            line-height: 1.6;
+        }
+        
+        /* Enhanced 3D Rose Section */
+        .rose-section {
+            display: none;
+            min-height: 100vh;
+            padding: 60px 20px;
+            background: radial-gradient(ellipse at center, rgba(255,240,245,0.8) 0%, rgba(255,182,193,0.4) 100%);
+        }
+        
+        .rose-container {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+        
+        .rose-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            animation: roseFloat 6s ease-in-out infinite;
+        }
+        
+        @keyframes roseFloat {
+            0%, 100% { transform: translateY(0) rotateY(0deg); }
+            50% { transform: translateY(-20px) rotateY(180deg); }
+        }
+        
+        .rose-3d {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotateRose 15s infinite linear;
+        }
+        
+        @keyframes rotateRose {
+            0% { transform: rotateY(0deg) rotateX(10deg); }
+            100% { transform: rotateY(360deg) rotateX(10deg); }
+        }
+        
+        .rose-petal {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle at 30% 30%, #ff69b4, #ff1493, #c71585);
+            border-radius: 50% 50% 50% 0;
+            transform-origin: bottom left;
+            box-shadow: 
+                0 10px 20px rgba(199, 21, 133, 0.4),
+                inset 0 0 20px rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .rose-petal:nth-child(1) { transform: rotate(0deg) translateX(60px) translateY(60px) rotateZ(0deg); }
+        .rose-petal:nth-child(2) { transform: rotate(72deg) translateX(60px) translateY(60px) rotateZ(0deg); }
+        .rose-petal:nth-child(3) { transform: rotate(144deg) translateX(60px) translateY(60px) rotateZ(0deg); }
+        .rose-petal:nth-child(4) { transform: rotate(216deg) translateX(60px) translateY(60px) rotateZ(0deg); }
+        .rose-petal:nth-child(5) { transform: rotate(288deg) translateX(60px) translateY(60px) rotateZ(0deg); }
+        
+        .rose-center {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle at 30% 30%, #ffb6c1, #ff69b4, #ff1493);
+            border-radius: 50%;
+            top: 75px;
+            left: 75px;
+            box-shadow: 
+                inset 0 0 30px rgba(255, 255, 255, 0.4),
+                0 5px 15px rgba(199, 21, 133, 0.3);
+            animation: centerPulse 3s infinite;
+        }
+        
+        @keyframes centerPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .rose-stem {
+            width: 12px;
+            height: 200px;
+            background: linear-gradient(to right, #228b22, #32cd32, #228b22);
+            margin: -30px auto 0;
+            border-radius: 6px;
+            position: relative;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+        
+        .rose-leaf {
+            position: absolute;
+            width: 80px;
+            height: 40px;
+            background: linear-gradient(45deg, #228b22, #32cd32);
+            border-radius: 0 50% 0 50%;
+            top: 80px;
+            left: -40px;
+            transform: rotate(-30deg);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .rose-leaf.right {
+            left: auto;
+            right: -40px;
+            transform: rotate(30deg) scaleX(-1);
+        }
+        
+        .rose-thorns {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 15px solid #228b22;
+            top: 120px;
+            left: -8px;
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.3));
+        }
+        
+        .rose-thorns::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 15px solid #228b22;
+            top: 40px;
+            left: 12px;
+            transform: scaleX(-1);
+        }
+        
+        .final-message {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5em;
+            color: #c71585;
+            text-align: center;
+            margin-top: 40px;
+            text-shadow: 
+                3px 3px 6px rgba(199, 21, 133, 0.3),
+                0 0 30px rgba(255, 20, 147, 0.4);
+            animation: finalGlow 3s infinite alternate;
+            line-height: 1.2;
+        }
+        
+        .final-subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            color: #db7093;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2s 1s both;
+        }
+        
+        @keyframes finalGlow {
+            from { 
+                text-shadow: 3px 3px 6px rgba(199, 21, 133, 0.3);
+                transform: scale(1);
+            }
+            to { 
+                text-shadow: 
+                    3px 3px 6px rgba(199, 21, 133, 0.5),
+                    0 0 40px rgba(255, 20, 147, 0.6),
+                    0 0 80px rgba(255, 105, 180, 0.4);
+                transform: scale(1.05);
+            }
+        }
+        
+        /* Enhanced Party Effects */
+        .party-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+        
+        .confetti-piece {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            animation: confettiFall 4s ease-out forwards;
+        }
+        
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-100px) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg) scale(0.5);
+                opacity: 0;
+            }
+        }
+        
+        .heart-burst {
+            position: absolute;
+            font-size: 30px;
+            animation: heartBurst 3s ease-out forwards;
+        }
+        
+        @keyframes heartBurst {
+            0% {
+                transform: translate(0, 0) scale(0);
+                opacity: 1;
+            }
+            50% { transform: translate(var(--tx), var(--ty)) scale(1.5); opacity: 1; }
+            100% {
+                transform: translate(var(--tx), calc(var(--ty) + 200px)) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        /* Navigation Dots */
+        .nav-dots {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 100;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(199, 21, 133, 0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .nav-dot.active {
+            background: #ff1493;
+            transform: scale(1.5);
+            border-color: white;
+            box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+        }
+        
+        /* Scroll Indicator */
+        .scroll-hint {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #c71585;
+            font-size: 1.2em;
+            animation: bounceArrow 2s infinite;
+            display: none;
+            z-index: 100;
+            background: rgba(255,255,255,0.8);
+            padding: 10px 20px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        @keyframes bounceArrow {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8em; }
+            .qa-title { font-size: 2.5em; }
+            .letter-title { font-size: 2.2em; }
+            .final-message { font-size: 3em; }
+            .front-page { padding: 40px 25px; }
+            .letter-container { padding: 40px 25px; }
+            .rose-container { width: 300px; height: 400px; }
+            .rose-3d { width: 200px; height: 200px; }
+            .rose-petal { width: 100px; height: 100px; }
+            .rose-center { width: 80px; height: 80px; top: 60px; left: 60px; }
+        }
+        
+        /* Fade animations */
+        .fade-out {
+            animation: fadeOut 0.8s forwards;
+        }
+        
+        @keyframes fadeOut {
+            to { opacity: 0; transform: scale(0.8) translateY(-50px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Background Elements -->
+    <div class="floating-container" id="floatingContainer"></div>
+    
+    <!-- Party Effects Container -->
+    <div class="party-container" id="partyContainer"></div>
+    
+    <!-- Navigation Dots -->
+    <div class="nav-dots" id="navDots" style="display: none;">
+        <div class="nav-dot active" onclick="scrollToSection(0)"></div>
+        <div class="nav-dot" onclick="scrollToSection(1)"></div>
+        <div class="nav-dot" onclick="scrollToSection(2)"></div>
+        <div class="nav-dot" onclick="scrollToSection(3)"></div>
+    </div>
+    
+    <!-- Scroll Hint -->
+    <div class="scroll-hint" id="scrollHint">⬇️ Scroll for more love ⬇️</div>
+
+    <div class="container">
+        <!-- Section 1: Front Page -->
+        <div class="section" id="section1">
+            <div class="front-page" id="frontPage">
+                <div class="corner-decoration corner-tl">🌹</div>
+                <div class="corner-decoration corner-tr">💕</div>
+                <div class="corner-decoration corner-bl">💖</div>
+                <div class="corner-decoration corner-br">💗</div>
+                
+                <h1>My Beloved Emaan Bukhari</h1>
+                <p class="subtitle">The Queen of My Heart & Soul</p>
+                <p class="question-text">Will you make me the happiest man alive<br>and be my Valentine forever? 💍</p>
+                
+                <div class="buttons-container" id="buttonContainer">
+                    <button class="btn btn-yes" id="yesBtn" onclick="startJourney()">
+                        Yes, My Eternal Love! 💖
+                    </button>
+                    <button class="btn btn-no" id="noBtn">No 💔</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Love Q&A -->
+        <div class="section" id="section2" style="display: none;">
+            <div class="qa-section" id="qaSection">
+                <h2 class="qa-title">Our Love Story 💑</h2>
+                
+                <div class="qa-card">
+                    <div class="qa-question">
+                        <span class="qa-icon">💭</span>
+                        What makes you my perfect match?
+                    </div>
+                    <div class="qa-answer">
+                        Emaan, you are the missing piece of my soul. Your smile brightens my darkest days, your laughter is my favorite melody, and your love makes me feel like the luckiest man alive. With you, every moment feels like a beautiful dream I never want to wake up from.
+                    </div>
+                </div>
+                
+                <div class="qa-card">
+                    <div class="qa-question">
+                        <span class="qa-icon">🌟</span>
+                        Why do I fall for you every single day?
+                    </div>
+                    <div class="qa-answer">
+                        Because every morning I wake up next to you, I discover a new reason to love you more. Your kindness, your strength, your beautiful heart, and the way you look at me with those eyes full of love... you make falling in love feel brand new every single day.
+                    </div>
+                </div>
+                
+                <div class="qa-card">
+                    <div class="qa-question">
+                        <span class="qa-icon">🔐</span>
+                        What is my biggest promise to you?
+                    </div>
+                    <div class="qa-answer">
+                        I promise to be your shelter in the storm, your sunshine on cloudy days, your partner in every adventure, and your home no matter where we are. I promise to love you not just when it's easy, but especially when it's hard. Forever isn't long enough with you.
+                    </div>
+                </div>
+                
+                <div class="qa-card">
+                    <div class="qa-question">
+                        <span class="qa-icon">🎁</span>
+                        What is the greatest gift you've given me?
+                    </div>
+                    <div class="qa-answer">
+                        You gave me the gift of true love, of being understood without words, of having a best friend and a soulmate in one beautiful person. You made me believe in fairy tales because my life with you is better than any story ever written.
+                    </div>
+                </div>
+                
+                <div class="qa-card">
+                    <div class="qa-question">
+                        <span class="qa-icon">🌈</span>
+                        What do I see when I look at our future?
+                    </div>
+                    <div class="qa-answer">
+                        I see gray hair and wrinkled hands still holding each other tight. I see grandchildren running around while we smile, remembering our journey. I see a lifetime of "I love you's" that never get old. With you, my future is nothing but beautiful.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Love Letter -->
+        <div class="section" id="section3" style="display: none;">
+            <div class="letter-section" id="letterSection">
+                <div class="letter-container">
+                    <div class="wax-seal">💌</div>
+                    <h2 class="letter-title">To My Dearest Wife, My Emaan</h2>
+                    <div class="letter-content" id="letterContent">
+                        <p>My beautiful Emaan Bukhari,</p>
+                        
+                        <p>As I sit down to write this to you, my heart is overflowing with a love so deep that words seem too small to capture it. You came into my life like a beautiful sunrise after the darkest night, and since then, every day has been brighter, warmer, and more colorful because of you.</p>
+                        
+                        <p><span class="highlight">You are not just my wife; you are my best friend, my confidante, my biggest supporter, and my greatest adventure.</span> When I look at you, I see the woman who chose to walk this journey with me, who stands by my side when the world gets tough, and who celebrates with me in moments of joy. That choice you made, to love me, is the greatest honor of my life.</p>
+                        
+                        <p>I know we have our moments—the little arguments, the silent treatments, the times when we both think we're right. But you know what? Even in those moments, when I see you upset, my heart aches to hold you, to fix whatever is broken, to see that beautiful smile return to your face. Because at the end of every disagreement, what remains is this undeniable truth: <span class="highlight">I cannot imagine my life without you, and I don't want to.</span></p>
+                        
+                        <p>You have a strength in you, Emaan, that amazes me every day. You handle challenges with grace, you face difficulties with courage, and you love with a depth that inspires me to be a better man. When you feel weak, remember that you are the woman who has conquered every storm that came her way. And you never have to face anything alone—I am here, always.</p>
+                        
+                        <p>My love, I want you to know that you are cherished beyond measure. Every morning I wake up grateful for another day to love you, to learn you, to grow with you. Every night I fall asleep thanking God for the blessing of having you in my arms. You are my answered prayer, my dream come true, my happily ever after.</p>
+                        
+                        <p>So here is my promise to you: I will love you when we're young and when we're old. I will love you in our best moments and our worst. I will love you not just with words, but with actions—through patience, through kindness, through understanding, and through unwavering loyalty. <span class="highlight">You are my today, my tomorrow, and all of my forevers.</span></p>
+                        
+                        <p>Happy Valentine's Day, my love. But know this—every day with you is Valentine's Day to me. Every moment is a celebration of the incredible woman you are and the beautiful love we share.</p>
+                        
+                        <div class="signature">
+                            Forever Yours,<br>
+                            Your Husband, Your Lover, Your Best Friend<br>
+                            ❤️❤️❤️
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: 3D Rose & Final Message -->
+        <div class="section" id="section4" style="display: none;">
+            <div class="rose-section" id="roseSection">
+                <div class="rose-container">
+                    <div class="rose-wrapper">
+                        <div class="rose-3d">
+                            <div class="rose-petal"></div>
+                            <div class="rose-petal"></div>
+                            <div class="rose-petal"></div>
+                            <div class="rose-petal"></div>
+                            <div class="rose-petal"></div>
+                            <div class="rose-center"></div>
+                        </div>
+                        <div class="rose-stem">
+                            <div class="rose-leaf"></div>
+                            <div class="rose-leaf right"></div>
+                            <div class="rose-thorns"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h1 class="final-message">
+                    I Love You<br>
+                    Emaan Bukhari
+                </h1>
+                <p class="final-subtitle">Today, Tomorrow & Always 💕</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating background elements
+        function createFloatingElements() {
+            const container = document.getElementById('floatingContainer');
+            const elements = [
+                { type: 'heart', chars: ['💕', '💖', '💗', '💓', '💝', '❤️', '💘'] },
+                { type: 'rose', chars: ['🌹', '🌺', '🌷', '💐'] },
+                { type: 'sparkle', chars: ['✨', '⭐', '🌟', '💫'] },
+                { type: 'kiss', chars: ['💋', '😘', '💏'] }
+            ];
+            
+            setInterval(() => {
+                const category = elements[Math.floor(Math.random() * elements.length)];
+                const item = document.createElement('div');
+                item.className = `floating-item ${category.type}`;
+                item.textContent = category.chars[Math.floor(Math.random() * category.chars.length)];
+                item.style.left = Math.random() * 100 + '%';
+                item.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                item.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                item.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(item);
+                
+                setTimeout(() => item.remove(), 10000);
+            }, 400);
+            
+            // Add particles
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.width = (Math.random() * 5 + 3) + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.background = `rgba(255, ${Math.floor(Math.random() * 100 + 100)}, 180, ${Math.random() * 0.5 + 0.3})`;
+                particle.style.animationDelay = Math.random() * 4 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                container.appendChild(particle);
+            }
+        }
+        
+        createFloatingElements();
+        
+        // No button behavior - Enhanced evasion
+        const noBtn = document.getElementById('noBtn');
+        const buttonContainer = document.getElementById('buttonContainer');
+        let noClickAttempts = 0;
+        
+        function moveNoButton() {
+            const rect = buttonContainer.getBoundingClientRect();
+            const maxX = rect.width - 150;
+            const maxY = rect.height - 60;
+            
+            let newX, newY;
+            do {
+                newX = Math.random() * maxX;
+                newY = Math.random() * maxY;
+            } while (Math.abs(newX - parseFloat(noBtn.style.left || 0)) < 50 && 
+                     Math.abs(newY - parseFloat(noBtn.style.top || 0)) < 50);
+            
+            noBtn.style.left = newX + 'px';
+            noBtn.style.top = newY + 'px';
+            
+            noClickAttempts++;
+            if (noClickAttempts > 3) {
+                noBtn.textContent = ['Nice try! 💝', 'Catch me! 💕', 'Too slow! 💗', 'Never! 💖'][Math.floor(Math.random() * 4)];
+            }
+        }
+        
+        noBtn.addEventListener('mouseover', moveNoButton);
+        noBtn.addEventListener('mouseenter', moveNoButton);
+        
+        document.addEventListener('mousemove', function(e) {
+            const btnRect = noBtn.getBoundingClientRect();
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            const btnCenterX = btnRect.left + btnRect.width / 2;
+            const btnCenterY = btnRect.top + btnRect.height / 2;
+            const distance = Math.sqrt(Math.pow(mouseX - btnCenterX, 2) + Math.pow(mouseY - btnCenterY, 2));
+            
+            if (distance < 120) {
+                moveNoButton();
+            }
+        });
+        
+        noBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            moveNoButton();
+            return false;
+        });
+        
+        // Enhanced Party Effects
+        function createMassiveParty() {
+            const partyContainer = document.getElementById('partyContainer');
+            const colors = ['#ff1493', '#ff69b4', '#ffb6c1', '#ffc0cb', '#ffd700', '#ff6347', '#ff4500', '#da70d6'];
+            
+            // Confetti explosion
+            for (let i = 0; i < 150; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti-piece';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.top = '-20px';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                    confetti.style.width = (Math.random() * 15 + 8) + 'px';
+                    confetti.style.height = confetti.style.width;
+                    confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                    confetti.style.animationDuration = (Math.random() * 2 + 3) + 's';
+                    partyContainer.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 4500);
+                }, i * 15);
+            }
+            
+            // Heart bursts
+            const heartEmojis = ['💖', '💕', '💗', '💓', '💝', '❤️', '💘', '💞'];
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart-burst';
+                    heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+                    heart.style.left = (Math.random() * 80 + 10) + '%';
+                    heart.style.top = (Math.random() * 80 + 10) + '%';
+                    heart.style.setProperty('--tx', (Math.random() * 200 - 100) + 'px');
+                    heart.style.setProperty('--ty', (Math.random() * 200 - 100) + 'px');
+                    heart.style.fontSize = (Math.random() * 20 + 25) + 'px';
+                    partyContainer.appendChild(heart);
+                    
+                    setTimeout(() => heart.remove(), 3000);
+                }, i * 100);
+            }
+        }
+        
+        // Start the journey
+        function startJourney() {
+            createMassiveParty();
+            
+            const frontPage = document.getElementById('frontPage');
+            frontPage.classList.add('fade-out');
+            
+            setTimeout(() => {
+                document.getElementById('section1').style.display = 'none';
+                document.getElementById('section2').style.display = 'flex';
+                document.getElementById('qaSection').style.display = 'block';
+                document.getElementById('navDots').style.display = 'flex';
+                
+                // Animate Q&A cards
+                const cards = document.querySelectorAll('.qa-card');
+                cards.forEach((card, index) => {
+                    card.style.animationDelay = (index * 0.3) + 's';
+                });
+                
+                // Show scroll hint after Q&A
+                setTimeout(() => {
+                    document.getElementById('scrollHint').style.display = 'block';
+                }, 3000);
+                
+            }, 800);
+        }
+        
+        // Scroll handling
+        let currentSection = 0;
+        const sections = ['section2', 'section3', 'section4'];
+        const sectionElements = [null, null, null];
+        
+        function updateNavDots() {
+            const dots = document.querySelectorAll('.nav-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSection);
+            });
+        }
+        
+        function scrollToSection(index) {
+            currentSection = index;
+            const sectionId = sections[index];
+            const section = document.getElementById(sectionId);
+            
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'flex';
+                if (sectionId === 'section3') {
+                    document.getElementById('letterSection').style.display = 'block';
+                    // Animate letter paragraphs
+                    const paragraphs = document.querySelectorAll('.letter-content p');
+                    paragraphs.forEach((p, idx) => {
+                        p.style.animationDelay = (idx * 0.4) + 's';
+                    });
+                } else if (sectionId === 'section4') {
+                    document.getElementById('roseSection').style.display = 'flex';
+                }
+            }
+            
+            section.scrollIntoView({ behavior: 'smooth' });
+            updateNavDots();
+            
+            if (index === 2) {
+                document.getElementById('scrollHint').style.display = 'none';
+            }
+        }
+        
+        // Auto-reveal sections on scroll
+        window.addEventListener('scroll', function() {
+            const scrollPos = window.scrollY + window.innerHeight;
+            
+            if (currentSection === 0 && scrollPos > document.getElementById('section2').offsetHeight - 100) {
+                if (document.getElementById('section3').style.display === 'none') {
+                    document.getElementById('section3').style.display = 'flex';
+                    document.getElementById('letterSection').style.display = 'block';
+                    const paragraphs = document.querySelectorAll('.letter-content p');
+                    paragraphs.forEach((p, idx) => {
+                        p.style.animationDelay = (idx * 0.4) + 's';
+                    });
+                    currentSection = 1;
+                    updateNavDots();
+                }
+            }
+            
+            if (currentSection === 1 && scrollPos > document.getElementById('section2').offsetHeight + document.getElementById('section3').offsetHeight - 200) {
+                if (document.getElementById('section4').style.display === 'none') {
+                    document.getElementById('section4').style.display = 'flex';
+                    document.getElementById('roseSection').style.display = 'flex';
+                    currentSection = 2;
+                    updateNavDots();
+                    document.getElementById('scrollHint').style.display = 'none';
+                    
+                    // Final celebration
+                    setTimeout(createMassiveParty, 1000);
+                }
+            }
+        });
+        
+        // Touch handling for mobile
+        let touchStartY = 0;
+        window.addEventListener('touchstart', e => touchStartY = e.touches[0].clientY);
+        window.addEventListener('touchend', e => {
+            const touchEndY = e.changedTouches[0].clientY;
+            if (touchStartY - touchEndY > 50 && currentSection < 2) {
+                scrollToSection(currentSection + 1);
+            }
+        });
+    </script>
+</body>
+</html>
